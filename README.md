@@ -1,1 +1,0 @@
-# omaramin-77.github.io
