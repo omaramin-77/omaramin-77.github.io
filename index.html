@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Omar Amin Abdelrazek — AI Engineer</title>
+  <meta name="description" content="Portfolio of Omar Amin Abdelrazek — AI Engineer specializing in LLMs, multimodal systems, and AI-driven automation." />
+
+  <!-- Google Fonts: Instrument Serif (display) + Geist (body) + JetBrains Mono (accents) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ================= NAVIGATION ================= -->
+  <header class="nav-wrapper">
+    <nav class="nav">
+      <a href="#top" class="nav-logo">Omar A.</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- ================= HERO ================= -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-meta">
+          <span class="eyebrow">Portfolio · 2026</span>
+          <span class="eyebrow">Giza, Egypt</span>
+        </div>
+
+        <h1 class="hero-title">
+          Omar Amin <em>Abdelrazek</em>
+        </h1>
+
+        <p class="hero-subtitle">
+          AI &amp; Software Engineering Student — building production-grade systems
+          with LLMs, multimodal models, and end-to-end AI workflows.
+        </p>
+
+        <p class="hero-intro">
+          Third-year BSc. in Artificial Intelligence at Nile University (GPA 3.98/4.0).
+          I design and ship things that turn messy real-world inputs — CVs, ID cards,
+          nutrition labels, patient records — into reliable, structured intelligence.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="./Omar_Amin_CV.pdf" download class="btn btn-ghost">Download CV ↓</a>
+          <a href="./Omar_Amin_Cover_Letter.pdf" download class="btn btn-ghost">Download Cover Letter ↓</a>
+        </div>
+      </div>
+
+      <div class="hero-rule"></div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-num">01</span>
+          <h2 class="section-title">About</h2>
+        </div>
+
+        <div class="about-grid">
+          <p class="about-lead">
+            I'm an AI Engineer in training, focused on the bridge between research
+            and shipped product.
+          </p>
+          <div class="about-body">
+            <p>
+              My work sits at the intersection of <strong>LLMs</strong>,
+              <strong>computer vision</strong>, and <strong>full-stack engineering</strong>.
+              At the National Training Academy I built a CV ranking engine fine-tuned on Llama 3.1
+              with LoRA, an OCR pipeline for noisy Egyptian National ID cards, and multilingual
+              processing flows that handle the messy reality of mixed Arabic/English documents.
+            </p>
+            <p>
+              Earlier I won 1st place at Nile University's UGRF competition for a multimodal
+              Nutri-Score classifier that fuses image, text, and tabular signals. I also taught —
+              as a Microsoft ASU front-end instructor and a junior TA at Nile University, where
+              I've mentored 50+ students through OOP, debugging, and code review.
+            </p>
+            <p>
+              I care about clean architecture, structured outputs from LLMs, and making AI
+              systems that actually hold up outside of a notebook.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROJECTS ================= -->
+    <section id="projects" class="section section-projects">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-num">02</span>
+          <h2 class="section-title">Selected Projects</h2>
+        </div>
+
+        <div class="projects-list">
+
+          <!-- Project 1 -->
+          <article class="project">
+            <div class="project-index">P/01</div>
+            <div class="project-body">
+              <h3 class="project-title">CS Pathfinder</h3>
+              <p class="project-tagline">A career guidance platform for CS students with AI-powered CV ranking.</p>
+              <p class="project-desc">
+                Full-stack web app combining personalized field-recommendation quizzes,
+                interactive learning roadmaps, and a Gemini-powered CV ranker that scores
+                resumes against job descriptions and returns structured feedback. I built
+                the AI ranking module, the quiz logic, and the database layer, then deployed
+                the system end-to-end on Railway.
+              </p>
+              <ul class="project-tags">
+                <li>Flask</li><li>Python</li><li>PostgreSQL</li><li>Google Gemini API</li><li>pdfplumber</li>
+              </ul>
+              <div class="project-meta">
+                <span class="role">Role: Co-developer (AI &amp; backend)</span>
+                <a class="repo-link" href="https://github.com/omaramin-77/cs-pathfinder" target="_blank" rel="noopener">View on GitHub →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project">
+            <div class="project-index">P/02</div>
+            <div class="project-body">
+              <h3 class="project-title">LLM LoRA CV Ranker</h3>
+              <p class="project-tagline">Llama 3.1 fine-tuned with LoRA for real-time CV ↔ job matching.</p>
+              <p class="project-desc">
+                Built during my AI internship at the National Training Academy. The pipeline
+                ingests PDF resumes, runs them through a parameter-efficient fine-tuned
+                Llama 3.1 model, and returns an overall score, a per-skill match breakdown,
+                and skill-gap recommendations. Includes language detection plus translation
+                so the ranker works across Arabic and English CVs, exposed via a Flask REST API.
+              </p>
+              <ul class="project-tags">
+                <li>Llama 3.1</li><li>LoRA</li><li>PyTorch</li><li>Flask</li><li>REST API</li>
+              </ul>
+              <div class="project-meta">
+                <span class="role">Role: Sole developer (internship)</span>
+                <a class="repo-link" href="https://github.com/omaramin-77/LLM_Lora_CV_Ranker" target="_blank" rel="noopener">View on GitHub →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project">
+            <div class="project-index">P/03</div>
+            <div class="project-body">
+              <h3 class="project-title">Smart Food Guardian — Multimodal</h3>
+              <p class="project-tagline">UGRF 1st place winner. Multimodal Nutri-Score classifier.</p>
+              <p class="project-desc">
+                A deep learning system that predicts a food product's Nutri-Score (A–E) by
+                fusing three modalities: product images, ingredient text, and tabular
+                nutrition values. The fusion architecture meaningfully outperformed every
+                unimodal baseline and won 1st place at Nile University's Undergraduate
+                Research Forum.
+              </p>
+              <ul class="project-tags">
+                <li>PyTorch</li><li>TensorFlow</li><li>Multimodal Fusion</li><li>OpenCV</li>
+              </ul>
+              <div class="project-meta">
+                <span class="role">Role: Lead contributor — fusion architecture</span>
+                <a class="repo-link" href="https://github.com/omaramin-77/Smart-Food-Guardian/tree/MultiModal" target="_blank" rel="noopener">View on GitHub →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="project">
+            <div class="project-index">P/04</div>
+            <div class="project-body">
+              <h3 class="project-title">Test Guard — Nutrition Label Web App</h3>
+              <p class="project-tagline">Production-style Nutri-Score predictor from real label photos.</p>
+              <p class="project-desc">
+                A Flask web app where users upload a nutrition label and get an A–E rating
+                back. OCR extracts the panel, a parser detects serving size and rescales
+                everything to a per-100g basis, and an XGBoost model trained on 5,000+ products
+                returns a Nutri-Score with per-class confidence. Achieves 83% test accuracy
+                using only data actually printed on the label.
+              </p>
+              <ul class="project-tags">
+                <li>Python</li><li>Flask</li><li>XGBoost</li><li>OCR.space</li><li>Scikit-learn</li>
+              </ul>
+              <div class="project-meta">
+                <span class="role">Role: Sole developer</span>
+                <a class="repo-link" href="https://github.com/omaramin-77/test-guard" target="_blank" rel="noopener">View on GitHub →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 5 -->
+          <article class="project">
+            <div class="project-index">P/05</div>
+            <div class="project-body">
+              <h3 class="project-title">Egyptian National ID OCR System</h3>
+              <p class="project-tagline">Computer vision pipeline for noisy real-world ID cards.</p>
+              <p class="project-desc">
+                Built during my NTA internship. The system detects an ID card inside an
+                arbitrary photograph, corrects perspective, isolates the relevant fields,
+                and runs OCR with preprocessing tuned for low-quality inputs. High
+                field-extraction accuracy across blurry, rotated, and unevenly lit samples.
+              </p>
+              <ul class="project-tags">
+                <li>Python</li><li>OpenCV</li><li>Tesseract</li><li>Image Preprocessing</li>
+              </ul>
+              <div class="project-meta">
+                <span class="role">Role: Sole developer (internship)</span>
+                <a class="repo-link" href="https://github.com/Marwan-Ghazal/Egyptian-National-ID-Card-OCR-System" target="_blank" rel="noopener">View on GitHub →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 6 -->
+          <article class="project">
+            <div class="project-index">P/06</div>
+            <div class="project-body">
+              <h3 class="project-title">Arabic OCR Pipeline — Egyptian ID Analysis</h3>
+              <p class="project-tagline">Benchmarking OCR engines for Arabic document recognition.</p>
+              <p class="project-desc">
+                A research-style pipeline that benchmarks Tesseract, EasyOCR, and PaddleOCR on
+                Egyptian National IDs. Adds contour-based card detection, an ROI strategy for
+                the name / address / ID number fields, and semantic validation of the 14-digit
+                national-ID format (DOB parsing, governorate code, authenticity checks).
+              </p>
+              <ul class="project-tags">
+                <li>OpenCV</li><li>PaddleOCR</li><li>EasyOCR</li><li>Tesseract</li><li>FastAPI</li>
+              </ul>
+              <div class="project-meta">
+                <span class="role">Role: Team contributor</span>
+                <a class="repo-link" href="https://github.com/Marwan-Ghazal/Egyptian-ID-OCR-Analysis" target="_blank" rel="noopener">View on GitHub →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 7 -->
+          <article class="project">
+            <div class="project-index">P/07</div>
+            <div class="project-body">
+              <h3 class="project-title">Diagnosis Analysis Pipeline</h3>
+              <p class="project-tagline">Containerized data pipeline for patient diagnostic data.</p>
+              <p class="project-desc">
+                An end-to-end Dockerized workflow that ingests raw patient datasets, cleans
+                and preprocesses them, runs analytics and unsupervised clustering, and
+                produces visual reports. Each stage is a separate, reproducible step, and
+                the whole pipeline ships as a single Docker image.
+              </p>
+              <ul class="project-tags">
+                <li>Python</li><li>Pandas</li><li>Scikit-learn</li><li>Docker</li><li>Matplotlib</li>
+              </ul>
+              <div class="project-meta">
+                <span class="role">Role: Team contributor (ingest, preprocess, clustering)</span>
+                <a class="repo-link" href="https://github.com/Marwan-Ghazal/Diagnosis-analysis" target="_blank" rel="noopener">View on GitHub →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 8 -->
+          <article class="project">
+            <div class="project-index">P/08</div>
+            <div class="project-body">
+              <h3 class="project-title">Cloud Management System</h3>
+              <p class="project-tagline">CLI cloud platform built on QEMU + Docker.</p>
+              <p class="project-desc">
+                A command-line cloud management tool that lets users provision QEMU
+                virtual machines, build and run Docker containers, and search/pull images
+                from DockerHub — all from one Python interface. Demonstrates core
+                virtualization and orchestration concepts in a single unified tool.
+              </p>
+              <ul class="project-tags">
+                <li>Python</li><li>Docker</li><li>QEMU</li><li>subprocess</li><li>unittest</li>
+              </ul>
+              <div class="project-meta">
+                <span class="role">Role: Team contributor</span>
+                <a class="repo-link" href="https://github.com/zakariahmedd34/cloud-management-system" target="_blank" rel="noopener">View on GitHub →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 9 -->
+          <article class="project">
+            <div class="project-index">P/09</div>
+            <div class="project-body">
+              <h3 class="project-title">Mobile Traffic Prediction — NetMob 2023</h3>
+              <p class="project-tagline">ML for forecasting Instagram &amp; YouTube traffic in French cities.</p>
+              <p class="project-desc">
+                An ML framework that forecasts mobile-app traffic across Paris and Lyon
+                using XGBoost, Gradient Boosting, and Random Forest on 40,000 NetMob 2023
+                records. Includes 28 engineered temporal/behavioral features and reaches
+                R² &gt; 0.998 with the best XGBoost configuration. Documented in an
+                IEEE-style report.
+              </p>
+              <ul class="project-tags">
+                <li>XGBoost</li><li>Pandas</li><li>Scikit-learn</li><li>Feature Engineering</li>
+              </ul>
+              <div class="project-meta">
+                <span class="role">Role: Team contributor — features &amp; modeling</span>
+                <a class="repo-link" href="https://github.com/Marwan-Ghazal/social-media-traffic-prediction" target="_blank" rel="noopener">View on GitHub →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 10 -->
+          <article class="project">
+            <div class="project-index">P/10</div>
+            <div class="project-body">
+              <h3 class="project-title">Raspberry Pi Smart Home Automation</h3>
+              <p class="project-tagline">Sensor-driven home automation on a Raspberry Pi.</p>
+              <p class="project-desc">
+                A smart-home system running on Raspberry Pi that reads from environmental
+                sensors and drives connected appliances through GPIO. Rules-based
+                automation handles lighting, temperature thresholds, and motion-triggered
+                events from a single Python service.
+              </p>
+              <ul class="project-tags">
+                <li>Python</li><li>Raspberry Pi</li><li>GPIO</li><li>IoT Sensors</li>
+              </ul>
+              <div class="project-meta">
+                <span class="role">Role: Team contributor</span>
+                <a class="repo-link" href="https://github.com/Marwan-Ghazal/SmartHomeAutomation-RaspberryPi" target="_blank" rel="noopener">View on GitHub →</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SKILLS ================= -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-num">03</span>
+          <h2 class="section-title">Skills</h2>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-group">
+            <h3 class="skill-heading">AI / Machine Learning</h3>
+            <ul class="skill-list">
+              <li>LLMs (Llama, OpenAI, Gemini)</li>
+              <li>LoRA / Fine-Tuning</li>
+              <li>Prompt Engineering</li>
+              <li>Structured Outputs</li>
+              <li>Embeddings &amp; RAG</li>
+              <li>PyTorch</li>
+              <li>TensorFlow</li>
+              <li>Scikit-learn</li>
+              <li>OpenCV</li>
+              <li>Tesseract / PaddleOCR</li>
+              <li>Multimodal Fusion</li>
+            </ul>
+          </div>
+
+          <div class="skill-group">
+            <h3 class="skill-heading">Programming Languages</h3>
+            <ul class="skill-list">
+              <li>Python</li>
+              <li>JavaScript</li>
+              <li>C++</li>
+              <li>C</li>
+              <li>Java</li>
+              <li>SQL</li>
+              <li>HTML / CSS</li>
+            </ul>
+          </div>
+
+          <div class="skill-group">
+            <h3 class="skill-heading">Tools &amp; Technologies</h3>
+            <ul class="skill-list">
+              <li>Flask</li>
+              <li>REST APIs</li>
+              <li>PostgreSQL</li>
+              <li>Docker</li>
+              <li>Git &amp; GitHub</li>
+              <li>VS Code</li>
+              <li>Jupyter</li>
+              <li>Linux / Bash</li>
+              <li>AI Coding Assistants</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT + DOCS ================= -->
+    <section id="contact" class="section section-contact">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-num">04</span>
+          <h2 class="section-title">Get in Touch</h2>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-lead">
+            <p class="contact-headline">
+              Open to internships, AI engineering roles, and interesting collaborations.
+            </p>
+            <p class="contact-sub">
+              Based in Giza, Egypt — happy to work remotely or relocate.
+            </p>
+          </div>
+
+          <div class="contact-links">
+            <a class="contact-link" href="mailto:oabdelrazek2005@gmail.com">
+              <span class="contact-label">Email</span>
+              <span class="contact-value">oabdelrazek2005@gmail.com</span>
+            </a>
+            <a class="contact-link" href="https://github.com/omaramin-77" target="_blank" rel="noopener">
+              <span class="contact-label">GitHub</span>
+              <span class="contact-value">github.com/omaramin-77</span>
+            </a>
+            <a class="contact-link" href="https://www.linkedin.com/in/omar-amin-abdelrazek/" target="_blank" rel="noopener">
+              <span class="contact-label">LinkedIn</span>
+              <span class="contact-value">www.linkedin.com/in/omar-amin-abdelrazek</span>
+            </a>
+            <a class="contact-link" href="tel:+201070207142">
+              <span class="contact-label">Phone</span>
+              <span class="contact-value">+20 107 020 7142</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="docs-block">
+          <h3 class="docs-title">Documents</h3>
+          <p class="docs-desc">Download my CV or cover letter for a closer look.</p>
+          <div class="docs-actions">
+            <a href="./Omar_Amin_CV.pdf" download class="btn btn-primary">Download CV ↓</a>
+            <a href="./Omar_Amin_Cover_Letter.pdf" download class="btn btn-ghost">Download Cover Letter ↓</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© 2026 Omar Amin Abdelrazek</span>
+      <span class="footer-mono">Designed &amp; built from scratch · Cairo</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
